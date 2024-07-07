@@ -26,6 +26,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "_9C-QhaF_n9RLt8WH",
+  });
+})();
+</script>
+
+
+
+<script src="/js/mail.js"></script>
 </head>
 
 <body id="top">
@@ -611,7 +627,7 @@
             </div>
     </div>
 
-    <div class="row row-x-center text-center s-contact__content">
+    <!-- <div class="row row-x-center text-center s-contact__content">
         <div class="column lg-12">
             <p class="lead">
                 "Ready to take your business online? Let us create a website that makes it easy. Contact us today!"
@@ -628,7 +644,18 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
+
+    <form id="contact-form">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <button onclick="sendMail()">send</button>
+        
+    </form>
 
     <footer class="s-footer">
 
@@ -733,21 +760,13 @@ Addressss <br>
 
     <!-- Java Script
     ================================================== -->
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
+
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
    
 
-<script type="text/javascript">
-    (function(){
-       emailjs.init({
-         publicKey: "_9C-QhaF_n9RLt8WH",
-       });
-    })();
- </script>
+
 
 </body>
 
